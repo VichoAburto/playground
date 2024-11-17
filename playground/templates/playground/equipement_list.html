@@ -1,0 +1,11 @@
+{% extends 'playground/base.html' %}
+ 
+{% block content %}
+    {% for equipement in equipements %}
+        <article class="post">
+            <h2><a href="{% url 'equipement_detail' pk=equipement.id_equip %}">{{ equipement.id_equip }}</a></h2>
+            <p>Disponibilite: {{ equipement.disponibilite }}</p>
+            <img class="character-photo" src="{{ equipement.photo }}" alt="{{ equipement.id_equip }}">
+        </article>
+    {% endfor %}
+{% endblock %}

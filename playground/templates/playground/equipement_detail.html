@@ -1,0 +1,9 @@
+{% extends 'playground/base.html' %}
+
+{% block content %}
+    <article class="post">
+        <h2>{{ equipement.id_equip }}</h2>
+        <p>Disponibilite: {{ equipement.disponibilite }}</p>
+        <img class="character-photo" src="{{ equipement.photo }}" alt="{{ equipement.id_equip }}">
+    </article>
+{% endblock %}

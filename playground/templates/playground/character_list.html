@@ -1,0 +1,14 @@
+{% extends 'playground/base.html' %}
+ 
+{% block content %}
+    {% for character in characters %}
+        <article class="post">
+          <h2><a href="{% url 'character_detail' id_character=character.id_character %}">{{ character.id_character }}</a></h2>
+            <p>Etat: {{ character.etat }}</p>
+            <p>Type: {{ character.type }}</p>
+            <p>Team : {{ character.team }}</p>
+            <p>Lieu: {{ character.lieu }}</p>
+            <img class="character-photo" src="{{ character.photo }}" alt="{{ character.id_character }}">
+        </article>
+    {% endfor %}
+{% endblock %}
